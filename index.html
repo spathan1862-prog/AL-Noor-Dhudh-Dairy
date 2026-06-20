@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL-Noor Dairy | Pure, Fresh & Organic Dairy Products</title>
+    <!-- Meta tags for SEO -->
+    <meta name="description"
+        content="Welcome to AL-Noor Dairy. We offer premium quality organic milk, farm-fresh butter, creamy yogurt, and pure golden ghee. Delivered fresh from our farm to your table.">
+    <meta name="keywords"
+        content="Al Noor Dairy, organic milk, farm fresh butter, pure ghee, natural yogurt, dairy shop, fresh milk">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Leaflet.js Map CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <span class="logo-accent">AL-Noor</span> Dairy
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#products" class="nav-link">Our Products</a></li>
+                    <li><a href="#location" class="nav-link">Location</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#products" class="btn btn-primary btn-nav">Order Now</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-bg-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge">100% Pure & Organic</span>
+                    <h1 class="hero-title">Nourishing Your Family with <span class="highlight">Nature's Best</span></h1>
+                    <p class="hero-description">Experience the rich, authentic taste of farm-fresh dairy products. From
+                        our pasture directly to your doorstep, AL-Noor Dairy brings purity you can trust.</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary btn-lg">Explore Products <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#about" class="btn btn-secondary btn-lg">Our Story</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-lbl">Organic & Pure</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">24h</span>
+                            <span class="stat-lbl">Fresh Delivery</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">5k+</span>
+                            <span class="stat-lbl">Happy Families</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features / Trust Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-cow"></i>
+                        </div>
+                        <h3 class="feature-title">Happy Cows</h3>
+                        <p class="feature-desc">Our cows roam freely on organic pastures, grazing on green grass for
+                            natural nutrition.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="feature-title">No Preservatives</h3>
+                        <p class="feature-desc">Zero chemicals, zero artificial additives, and absolutely no hormones
+                            added.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-truck-droplet"></i>
+                        </div>
+                        <h3 class="feature-title">Cold-Chain Delivery</h3>
+                        <p class="feature-desc">Packed and shipped in strict temperature-controlled settings to maintain
+                            absolute freshness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-section" id="about">
+            <div class="container about-grid">
+                <div class="about-images">
+                    <div class="image-wrapper main-img">
+                        <img src="images/hero.png" alt="AL-Noor Dairy farm and fresh milk">
+                    </div>
+                    <div class="about-card-badge">
+                        <i class="fa-solid fa-award"></i>
+                        <h4>15+ Years</h4>
+                        <p>Of Pure Trust</p>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-badge">About AL-Noor Dairy</span>
+                    <h2 class="section-title">Where Tradition Meets Purity</h2>
+                    <p class="about-text">
+                        For over a decade, AL-Noor Dairy has been a cornerstone of health in our community. We started
+                        with a simple belief: that everyone deserves access to untampered, pure, and rich dairy
+                        products.
+                    </p>
+                    <p class="about-text">
+                        Today, we continue that heritage by utilizing state-of-the-art hygiene practices while
+                        maintaining our traditional dairy farming methods. Every drop of milk, every dollop of yogurt,
+                        and every jar of ghee is processed with absolute care and respect for nature.
+                    </p>
+
+                    <ul class="about-features">
+                        <li><i class="fa-solid fa-circle-check"></i> Cleaned & pasteurized under sterile environment
+                        </li>
+                        <li><i class="fa-solid fa-circle-check"></i> Sustainable and ethical dairy farming</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Daily lab-tested quality control checks</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section" id="products">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">Our Catalog</span>
+                    <h2 class="section-title">Fresh Dairy Products</h2>
+                    <p class="section-subtitle">Pure, nutritious, and straight from our farm to your family.</p>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Product 1: Milk -->
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="images/milk.png" alt="Fresh Organic Milk" class="product-img">
+                            <span class="product-tag">Best Seller</span>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(4.9)</span>
+                            </div>
+                            <h3 class="product-title">Fresh Organic Milk</h3>
+                            <p class="product-desc">Pure, creamy, raw whole milk pasteurized to perfection. High in
+                                cream content and natural calcium.</p>
+
+                            <div class="product-meta">
+                                <div class="product-size">
+                                    <label for="size-milk">Volume:</label>
+                                    <select id="size-milk" class="size-select">
+                                        <option value="1 Liter" data-price="$1.99">1 Liter ($1.99)</option>
+                                        <option value="2 Liters" data-price="$3.79">2 Liters ($3.79)</option>
+                                        <option value="5 Liters" data-price="$8.99">5 Liters ($8.99)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="product-footer">
+                                <div class="product-price">
+                                    <span class="price-val" id="price-milk">$1.99</span>
+                                </div>
+                                <button class="btn btn-whatsapp-order" data-product="Fresh Organic Milk"
+                                    data-select-id="size-milk">
+                                    <i class="fa-brands fa-whatsapp"></i> Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2: Ghee -->
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="images/ghee.png" alt="Pure Golden Ghee" class="product-img">
+                            <span class="product-tag">Premium</span>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                            <h3 class="product-title">Pure Golden Ghee</h3>
+                            <p class="product-desc">Traditional slow-cooked clarified butter. Rich aroma, granular
+                                texture, and loaded with healthy fats.</p>
+
+                            <div class="product-meta">
+                                <div class="product-size">
+                                    <label for="size-ghee">Weight:</label>
+                                    <select id="size-ghee" class="size-select">
+                                        <option value="500g" data-price="$9.99">500g ($9.99)</option>
+                                        <option value="1kg" data-price="$18.99">1kg ($18.99)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="product-footer">
+                                <div class="product-price">
+                                    <span class="price-val" id="price-ghee">$9.99</span>
+                                </div>
+                                <button class="btn btn-whatsapp-order" data-product="Pure Golden Ghee"
+                                    data-select-id="size-ghee">
+                                    <i class="fa-brands fa-whatsapp"></i> Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3: Butter -->
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="images/butter.png" alt="Farm Fresh Butter" class="product-img">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                                <span>(4.7)</span>
+                            </div>
+                            <h3 class="product-title">Farm Fresh Butter</h3>
+                            <p class="product-desc">Churned fresh from organic cream. Lightly salted, incredibly creamy,
+                                and perfect for spreading.</p>
+
+                            <div class="product-meta">
+                                <div class="product-size">
+                                    <label for="size-butter">Weight:</label>
+                                    <select id="size-butter" class="size-select">
+                                        <option value="250g" data-price="$3.49">250g ($3.49)</option>
+                                        <option value="500g" data-price="$6.49">500g ($6.49)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="product-footer">
+                                <div class="product-price">
+                                    <span class="price-val" id="price-butter">$3.49</span>
+                                </div>
+                                <button class="btn btn-whatsapp-order" data-product="Farm Fresh Butter"
+                                    data-select-id="size-butter">
+                                    <i class="fa-brands fa-whatsapp"></i> Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4: Yogurt -->
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="images/yogurt.png" alt="Fresh Creamy Yogurt" class="product-img">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(4.8)</span>
+                            </div>
+                            <h3 class="product-title">Fresh Creamy Yogurt</h3>
+                            <p class="product-desc">Probiotic-rich, thick and creamy natural yogurt. Fermented overnight
+                                with traditional live cultures.</p>
+
+                            <div class="product-meta">
+                                <div class="product-size">
+                                    <label for="size-yogurt">Weight:</label>
+                                    <select id="size-yogurt" class="size-select">
+                                        <option value="400g" data-price="$2.29">400g ($2.29)</option>
+                                        <option value="1kg" data-price="$4.99">1kg ($4.99)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="product-footer">
+                                <div class="product-price">
+                                    <span class="price-val" id="price-yogurt">$2.29</span>
+                                </div>
+                                <button class="btn btn-whatsapp-order" data-product="Fresh Creamy Yogurt"
+                                    data-select-id="size-yogurt">
+                                    <i class="fa-brands fa-whatsapp"></i> Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="location-section" id="location">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">Visit Us</span>
+                    <h2 class="section-title">Where to Find Us</h2>
+                    <p class="section-subtitle">Drop by our local outlet to sample our fresh products directly.</p>
+                </div>
+
+                <div class="location-grid">
+                    <!-- Map Wrapper -->
+                    <div class="map-card">
+                        <div id="map" class="interactive-map"></div>
+                    </div>
+
+                    <!-- Location Info Panel -->
+                    <div class="info-card">
+                        <h3 class="info-title"><i class="fa-solid fa-map-location-dot"></i> Outlet Location</h3>
+                        <div class="info-item">
+                            <span class="info-label">Address:</span>
+                            <span class="info-value">Al-Noor Dairy, At Noor Hospital,Jalna - Aurangabad Highway Road,
+                                431202 </span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Timings:</span>
+                            <span class="info-value">Monday – Sunday: Mornnig, 6:30-11:30 AM, Evinning 4:30-11:30
+                                PM</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value">shaikhs8103@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Phone:</span>
+                            <span class="info-value">+91 9370832770</span>
+                        </div>
+
+                        <div class="store-features">
+                            <div class="s-feature">
+                                <i class="fa-solid fa-parking"></i>
+                                <span>Free Parking</span>
+                            </div>
+                            <div class="s-feature">
+                                <i class="fa-solid fa-credit-card"></i>
+                                <span>Cards Accepted</span>
+                            </div>
+                            <div class="s-feature">
+                                <i class="fa-solid fa-person-circle-check"></i>
+                                <span>Fresh Tasters</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Contact Form -->
+        <section class="contact-section" id="contact">
+            <div class="container contact-container">
+                <div class="contact-bg-pattern"></div>
+                <div class="contact-content-box">
+                    <span class="section-badge">Have Questions?</span>
+                    <h2 class="section-title">Send Us a Quick Message</h2>
+                    <p class="contact-subtitle">Fill out the form below or chat with us instantly on WhatsApp!</p>
+
+                    <form id="quick-contact-form" class="contact-form">
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="c-name">Your Name</label>
+                                <input type="text" id="c-name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="c-email">Email Address</label>
+                                <input type="email" id="c-email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-subject">Subject</label>
+                            <input type="text" id="c-subject" placeholder="General Inquiry / Home Delivery" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-message">Message</label>
+                            <textarea id="c-message" rows="4"
+                                placeholder="Hi, I am interested in daily home delivery..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Send Message <i
+                                class="fa-regular fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-accent">AL-Noor</span> Dairy
+                </a>
+                <p class="footer-desc">Bringing pure, farm-fresh organic dairy products to your table since 2011.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col links-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#products">Our Products</a></li>
+                    <li><a href="#location">Find Location</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col services-col">
+                <h3>Our Offers</h3>
+                <ul>
+                    <li>Daily Home Delivery</li>
+                    <li>Bulk Event Orders</li>
+                    <li>Organic Farm Tours</li>
+                    <li>Quality Assurance</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <p>&copy; 2026 AL-Noor Dairy. All rights reserved. Created with pure love & hygiene.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp popbutton & widget -->
+    <div class="whatsapp-wrapper" id="whatsapp-wrapper">
+        <!-- Floating Button -->
+        <button class="whatsapp-btn" id="whatsapp-trigger" aria-label="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="whatsapp-badge-pulse"></span>
+        </button>
+
+        <!-- Interactive Pop-up Widget -->
+        <div class="whatsapp-widget" id="whatsapp-widget">
+            <div class="widget-header">
+                <div class="agent-profile">
+                    <div class="profile-img-wrapper">
+                        <!-- Custom agent icon/photo placeholder styled beautifully -->
+                        <i class="fa-solid fa-cow agent-icon"></i>
+                        <span class="online-dot"></span>
+                    </div>
+                    <div class="agent-info">
+                        <h4>AL-Noor Support</h4>
+                        <span>Online • Fresh Dairy Help</span>
+                    </div>
+                </div>
+                <button class="widget-close" id="widget-close" aria-label="Close Chat Window">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="widget-body">
+                <div class="message-bubble received">
+                    <p>Assalam-o-Alaikum! 🥛 Welcome to AL-Noor Dairy support.</p>
+                    <span class="msg-time" id="msg-time">18:08</span>
+                </div>
+                <div class="message-bubble received">
+                    <p>How can we help you today? Ask about our fresh milk, butter, ghee, or home deliveries!</p>
+                </div>
+            </div>
+
+            <div class="widget-footer">
+                <input type="text" id="whatsapp-user-message" placeholder="Type a message..."
+                    aria-label="WhatsApp Message input">
+                <button id="whatsapp-send-btn" aria-label="Send via WhatsApp">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Hover Tooltip -->
+        <div class="whatsapp-tooltip" id="whatsapp-tooltip">
+            <span>Chat with us!</span>
+        </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="app.js"></script>
+</body>
+
+</html>
